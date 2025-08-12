@@ -6,10 +6,10 @@ import laptop from "../assets/images/image-top-laptops.jpg";
 
 const Content = () => {
   const data = [
-    {
-      title: "  Hydrogen VS Electric Cars",
-      description: " Will hydrogen-fueled cars ever catch up to EVs?",
-    },
+    // {
+    //   title: "  Hydrogen VS Electric Cars",
+    //   description: " Will hydrogen-fueled cars ever catch up to EVs?",
+    // },
     {
       title: "  The Downsides of AI Artistry",
       description:
