@@ -5,7 +5,7 @@ import puppeteer from "puppeteer";
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
-  await page.goto("http://localhost:5173", { waitUntil: "networkidle2" });
+  await page.goto("https://news-homepage-main-liard-ten.vercel.app", { waitUntil: "networkidle2" });
   await page.screenshot({ path: "homepage.png" });
   await browser.close();
 })();
