@@ -4,4 +4,5 @@ Feel free to copy the code 🙌
 
 A follow would be appreciated!!
 
-![Homepage Screenshot](./homepage.png)
+Homepage Screenshot
+(./homepage.png)
