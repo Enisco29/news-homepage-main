@@ -1,0 +1,39 @@
+name: Update Screenshot
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start React app
+        run: npm start &
+      
+      - name: Wait for app to start
+        run: sleep 10
+
+      - name: Take screenshot
+        run: node screenshot.js
+
+      - name: Commit and push screenshot
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add homepage.png
+          git commit -m "Update screenshot"
+          git push
